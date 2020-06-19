@@ -20,5 +20,3 @@ class Post(db.Model):
         return f'<Post text={self.text}>'
 
 
-# db.create_all()
-# db.session.commit()
