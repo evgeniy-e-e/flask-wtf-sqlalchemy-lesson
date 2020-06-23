@@ -24,3 +24,8 @@ class LoginForm(FlaskForm):
                                                    Length(min=6, message="Минимальная длина пароля %(min)d символов!")])
     remember_me = BooleanField('Запомнить меня', default='checked')
     submit = SubmitField('Войти')
+
+
+class PostForm(FlaskForm):
+    text = TextAreaField('Текст публикации', validators=[DataRequired(message="Поле обязательно для ввода!")])
+    submit = SubmitField('Сохранить')

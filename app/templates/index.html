@@ -6,4 +6,15 @@
             <b>{{ email }}</b>
         {% endif %}
     </h1>
+
+    <h3><a href="{{ url_for('create_post') }}">Создать публикацию</a></h3>
+    <h3><a href="{{ url_for('sign_up') }}">Регистрация</a></h3>
+    <h3><a href="{{ url_for('login') }}">Вход</a></h3>
+
+    <ul>
+        {% for post in posts %}
+            <li>{{ post.text }}</li>
+        {% endfor %}
+    </ul>
+
 {% endblock content %}
