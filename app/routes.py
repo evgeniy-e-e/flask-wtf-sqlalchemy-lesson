@@ -28,6 +28,9 @@ def sign_up():
             email=register_data['email'],
             password=register_data['password'],
             name=register_data['name'],
+            age=register_data['age'],
+            sex=register_data['sex'],
+            about_me=register_data['about_me'],
         )
         session['email'] = register_data['email']
         db.session.add(new_user)
