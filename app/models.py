@@ -6,6 +6,9 @@ class User(db.Model):
     email = db.Column(db.String(128), unique=True)
     name = db.Column(db.String)
     password = db.Column(db.String())
+    age = db.Column(db.Integer)
+    sex = db.Column(db.String(10))
+    about_me = db.Column(db.String)
 
     def __repr__(self):
         return f'<User {self.email}>'
