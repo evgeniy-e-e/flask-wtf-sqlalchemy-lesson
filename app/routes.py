@@ -79,8 +79,10 @@ def login():
         user_db = User.query.filter(User.email == login_data['email']).one_or_none()
         if user_db is not None and user_db.check_password(login_data['password']):
             login_user(user_db)
+            app.logger.info(f'Пользователь [{user_db.name}] успешно вошел на сайт')
             return redirect(url_for('index'))
         error = "Неправильный логин или пароль!"
+        app.logger.error(error)
     return render_template('login.html', title='Войти на сайт', form=form, error=error)
 
 
