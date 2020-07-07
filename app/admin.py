@@ -1,8 +1,10 @@
+# -*- coding: utf-8 -*-
 from app.models import User, Post
 from app import app, db
 from flask_admin.contrib.sqla import ModelView
 from flask_admin import Admin
 from flask_login import current_user
+
 from flask import redirect, url_for
 
 
