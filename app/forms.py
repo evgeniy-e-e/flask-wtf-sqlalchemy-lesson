@@ -3,6 +3,7 @@ from flask_wtf import FlaskForm
 from wtforms.fields import StringField, PasswordField, IntegerField, SelectField, TextAreaField, SubmitField, BooleanField
 from wtforms.fields.html5 import EmailField
 from wtforms.validators import Email, DataRequired, EqualTo, Length, NumberRange
+from flask_ckeditor import CKEditorField
 
 
 class RegistrationForm(FlaskForm):
@@ -30,6 +31,6 @@ class LoginForm(FlaskForm):
 class PostForm(FlaskForm):
     heading = StringField('Название статьи', validators=[DataRequired(message="Заголовок обязателен!"),
                                                          Length(min=3, message="Минимум три символа в заголовке")])
-    text = TextAreaField('Текст публикации', validators=[DataRequired(message="Поле обязательно для ввода!"),
+    text = CKEditorField('Текст публикации', validators=[DataRequired(message="Поле обязательно для ввода!"),
                                                          Length(min=10, message='Введите больше текста...')])
     submit = SubmitField('Сохранить')

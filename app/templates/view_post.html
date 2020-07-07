@@ -2,6 +2,6 @@
 
 {% block content %}
     <h1 class="display-3 mb-3">{{ post.heading }}</h1>
-    <p class="lead">{{ post.text }}</p>
+    <p class="lead">{{ post.text | safe }}</p>
     <h3 class="small">Опубликовал {{ post.author.name }} в {{ post.date_created }}</h3>
 {% endblock %}

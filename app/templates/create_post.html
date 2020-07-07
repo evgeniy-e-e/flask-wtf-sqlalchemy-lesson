@@ -19,4 +19,7 @@
         {% endfor %}
         {{ form.submit(class="btn btn-large btn-primary") }}
     </form>
+
+ {{ ckeditor.load() }}
+ {{ ckeditor.config(name='body') }}
 {% endblock content %}
