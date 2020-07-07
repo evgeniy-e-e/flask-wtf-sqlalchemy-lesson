@@ -14,6 +14,7 @@
                       <p>{{ post.text }}</p>
                       <footer class="blockquote-footer">Опубликовал <cite>{{ post.author.name }}</cite></footer>
                     </blockquote>
+                      <a href="{{ url_for('view_post', id_post=post.id) }}" class="btn btn-outline-dark mt-3">Читать далее...</a>
                   </div>
                 </div>
             </div>
