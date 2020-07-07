@@ -11,7 +11,8 @@ class User(db.Model, UserMixin):
     age = db.Column(db.Integer)
     sex = db.Column(db.String(10))
     about_me = db.Column(db.String)
-    posts = db.relationship('Post')
+    posts = db.relationship('Post', backref='author', lazy="dynamic")
+    address = db.relationship('Address', uselist=False, backref='user')
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -23,12 +24,22 @@ class User(db.Model, UserMixin):
         return f'<User {self.email}>'
 
 
+class Address(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    country = db.Column(db.String())
+    city = db.Column(db.String())
+    street = db.Column(db.String())
+    house_number = db.Column(db.Integer())
+    address_index = db.Column(db.Integer())
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.String)
     date_created = db.Column(db.DateTime)
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    author = db.relationship('User')
+    # author = db.relationship('User')
 
     def __repr__(self):
         return f'<Post text={self.text}>'
