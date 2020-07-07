@@ -28,5 +28,8 @@ class LoginForm(FlaskForm):
 
 
 class PostForm(FlaskForm):
-    text = TextAreaField('Текст публикации', validators=[DataRequired(message="Поле обязательно для ввода!")])
+    heading = StringField('Название статьи', validators=[DataRequired(message="Заголовок обязателен!"),
+                                                         Length(min=3, message="Минимум три символа в заголовке")])
+    text = TextAreaField('Текст публикации', validators=[DataRequired(message="Поле обязательно для ввода!"),
+                                                         Length(min=10, message='Введите больше текста...')])
     submit = SubmitField('Сохранить')

@@ -29,6 +29,7 @@ def create_post():
     if form.validate_on_submit():
         user = User.query.filter(User.email == current_user.email).one()
         new_post = Post(
+            heading=form.heading.data,
             text=form.text.data,
             date_created=datetime.now(),
             author_id=user.id
