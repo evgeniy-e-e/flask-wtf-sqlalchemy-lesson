@@ -37,6 +37,7 @@ class Address(db.Model):
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    heading = db.Column(db.String(120))
     text = db.Column(db.String)
     date_created = db.Column(db.DateTime)
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
