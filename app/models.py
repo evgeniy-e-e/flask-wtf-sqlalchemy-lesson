@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from app import db
+# from werkzeug import generate_password_hash, check_password_hash
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
@@ -38,6 +39,7 @@ class Address(db.Model):
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     heading = db.Column(db.String(120))
+    intro_text = db.Column(db.String)
     text = db.Column(db.String)
     date_created = db.Column(db.DateTime)
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))

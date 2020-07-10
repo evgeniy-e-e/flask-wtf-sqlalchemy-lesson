@@ -10,3 +10,4 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     FLASK_ADMIN_SWATCH = 'Lumen'
     ADMIN_EMAIL = 'moscow1@itstep.org'
+    INTRO_WORDS_COUNT = 20

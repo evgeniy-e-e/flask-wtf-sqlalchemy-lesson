@@ -6,6 +6,7 @@ from app.forms import RegistrationForm, LoginForm, PostForm
 from datetime import datetime
 from app import login
 from flask_login import login_user, logout_user, current_user, login_required
+from bs4 import BeautifulSoup
 
 
 @login.user_loader
@@ -19,17 +20,6 @@ def index():
     if current_user.is_authenticated:
         email = current_user.email
     posts = Post.query.all()
-    for i, post in enumerate(posts):
-        preview_text = ''
-        word_count = 0
-        for word in post.text.split():
-            preview_text += word + ' '
-            word_count += 1
-            if word_count == 20:
-                break
-        posts[i].text = preview_text.rstrip()
-        if word_count == 20:
-            posts[i].text += '...'
     return render_template('index.html', email=email, posts=posts)
 
 
@@ -45,9 +35,21 @@ def create_post():
     form = PostForm()
     if form.validate_on_submit():
         user = User.query.filter(User.email == current_user.email).one()
+        preview_text, word_count, is_sliced = '', 0, False
+        text = form.text.data
+        words = BeautifulSoup(text, 'html.parser').text.split()
+        for word in words:
+            preview_text += word + ' '
+            word_count += 1
+            if word_count == app.config['INTRO_WORDS_COUNT']:
+                if word_count < len(words):
+                    preview_text += '...'
+                break
+        intro_text = preview_text.rstrip()
         new_post = Post(
             heading=form.heading.data,
-            text=form.text.data,
+            text=text,
+            intro_text=intro_text,
             date_created=datetime.now(),
             author_id=user.id
         )
