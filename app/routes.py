@@ -20,7 +20,7 @@ def index():
     if current_user.is_authenticated:
         email = current_user.email
     posts = Post.query.all()
-    return render_template('index.html', email=email, posts=posts)
+    return render_template('posts.html', email=email, posts=posts)
 
 
 @app.route('/posts/<int:id_post>')
@@ -42,10 +42,13 @@ def create_post():
             preview_text += word + ' '
             word_count += 1
             if word_count == app.config['INTRO_WORDS_COUNT']:
-                if word_count < len(words):
-                    preview_text += '...'
                 break
-        intro_text = preview_text.rstrip()
+        if word_count < len(words):
+            intro_text = preview_text.rstrip() + '...'
+        else:
+            intro_text = preview_text.rstrip()
+
+
         new_post = Post(
             heading=form.heading.data,
             text=text,

@@ -11,7 +11,7 @@
                   </div>
                   <div class="card-body">
                     <blockquote class="blockquote mb-0">
-                      <p>{{ post.text }}</p>
+                      <p>{{ post.intro_text }}</p>
                       <footer class="blockquote-footer">Опубликовал <cite>{{ post.author.name }}</cite></footer>
                     </blockquote>
                       <a href="{{ url_for('view_post', id_post=post.id) }}" class="btn btn-outline-dark mt-3">Читать далее...</a>

@@ -5,3 +5,37 @@
 2020-07-10 19:35:12,362 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
 2020-07-10 19:47:14,954 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
 2020-07-10 19:47:26,763 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
+2020-07-10 19:51:43,031 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
+2020-07-10 19:51:44,749 ERROR: Exception on / [GET] [in c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\routes.py", line 23, in index
+    return render_template('index.html', email=email, posts=posts)
+  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\jinja2\loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2020-07-10 19:52:08,940 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
+2020-07-10 19:55:08,876 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
