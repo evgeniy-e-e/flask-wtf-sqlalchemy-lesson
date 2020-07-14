@@ -45,6 +45,14 @@ class Post(db.Model):
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     # author = db.relationship('User')
 
+    def to_dict(self):
+        return {
+            'userId': self.author_id,
+            'id': self.id,
+            'title': self.heading,
+            'body': self.intro_text
+        }
+
     def __repr__(self):
         return f'<Post text={self.text}>'
 

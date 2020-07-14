@@ -7,12 +7,5 @@ api = Blueprint('api_module', __name__)
 
 @api.route('/posts')
 def posts_api():
-    posts = []
-    for post in Post.query.all():
-        posts.append({
-            'userId': post.author_id,
-            'id': post.id,
-            'title': post.heading,
-            'body': post.intro_text
-        })
-    return jsonify(posts)
+    posts = Post.query.all()
+    return jsonify([post.to_dict() for post in posts])
