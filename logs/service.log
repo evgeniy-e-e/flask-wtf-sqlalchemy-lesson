@@ -39,3 +39,5 @@ Traceback (most recent call last):
 jinja2.exceptions.TemplateNotFound: index.html
 2020-07-10 19:52:08,940 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
 2020-07-10 19:55:08,876 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
+2020-07-14 19:36:53,852 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:28]
+2020-07-14 19:38:40,681 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]

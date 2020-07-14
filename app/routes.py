@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from app import app, db
-from flask import render_template, redirect, url_for
+from flask import render_template, redirect, url_for, jsonify
 from app.models import User, Post
 from app.forms import RegistrationForm, LoginForm, PostForm
 from datetime import datetime
@@ -114,3 +114,5 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+
