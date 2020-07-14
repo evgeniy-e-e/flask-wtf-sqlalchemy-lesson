@@ -4,4 +4,31 @@
     <h1 class="display-3 mb-3">{{ post.heading }}</h1>
     <p class="lead">{{ post.text | safe }}</p>
     <h3 class="small">Опубликовал {{ post.author.name }} в {{ post.date_created }}</h3>
+{#    Карточка с динамической загрузкой статей #}
+    <hr class="my-5">
+    <div class="card">
+        <div class="card-header">
+            Статья закончилась <button class="btn btn-primary" id="load-articles">Загрузить еще?</button>
+        </div>
+        <div class="list-group" id="loaded-articles">
+            <div class="list-group-item text-muted"><i>Пока еще нет статей</i></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script_src %}
+    <script>
+        let loadedPosts = document.getElementById('loaded-articles');
+        document.getElementById('load-articles').addEventListener('click', e => {
+            fetch('/api/v1/posts')
+                .then(response => response.json())
+                .then(json => {
+                    loadedPosts.innerHTML = '';
+                    for (let post of json) {
+                        loadedPosts.innerHTML += `<div class="list-group-item text-muted"> \
+                                                  <strong>${post.title}</strong> - ${post.body}</div>`
+                    }
+                })
+        })
+    </script>
 {% endblock %}
