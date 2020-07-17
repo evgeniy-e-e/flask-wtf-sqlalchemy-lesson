@@ -1,60 +1,75 @@
-2020-07-17 19:41:36,420 ERROR: Exception on / [GET] [in c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py:1891]
+2020-07-17 20:18:57,061 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
+2020-07-17 20:21:51,971 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
+2020-07-17 20:21:56,721 ERROR: Exception on /posts/2 [GET] [in c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\base.py", line 1247, in _execute_context
-    self.dialect.do_execute(
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\default.py", line 588, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.OperationalError: no such table: post
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\routes.py", line 22, in index
-    posts = Post.query.all()
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\query.py", line 3244, in all
-    return list(self)
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\query.py", line 3403, in __iter__
-    return self._execute_and_instances(context)
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\query.py", line 3428, in _execute_and_instances
-    result = conn.execute(querycontext.statement, self._params)
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\base.py", line 984, in execute
-    return meth(self, multiparams, params)
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\sql\elements.py", line 293, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\base.py", line 1097, in _execute_clauseelement
-    ret = self._execute_context(
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\base.py", line 1287, in _execute_context
-    self._handle_dbapi_exception(
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\base.py", line 1481, in _handle_dbapi_exception
-    util.raise_(
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
-    raise exception
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\base.py", line 1247, in _execute_context
-    self.dialect.do_execute(
-  File "c:\users\mewfo\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\default.py", line 588, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: post
-[SQL: SELECT post.id AS post_id, post.heading AS post_heading, post.intro_text AS post_intro_text, post.text AS post_text, post.date_created AS post_date_created, post.author_id AS post_author_id, post.category_id AS post_category_id 
-FROM post]
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2020-07-17 19:42:03,378 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
-2020-07-17 19:42:13,545 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
-2020-07-17 19:42:22,600 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
-2020-07-17 19:42:45,153 ERROR: Неправильный логин или пароль! [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\routes.py:109]
-2020-07-17 19:42:48,158 INFO: Пользователь [Сергей] успешно вошел на сайт [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\routes.py:106]
-2020-07-17 19:45:09,396 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
-2020-07-17 19:46:04,032 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
-2020-07-17 19:59:27,778 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
-2020-07-17 20:01:43,782 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:29]
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\routes.py", line 29, in view_post
+    return render_template('view_post.html', post=post)
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\view_post.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\base.html", line 66, in top-level template code
+    {% block content %}
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\view_post.html", line 8, in block "content"
+    {{ moment(post.date_created).fromNow().calendar()  }}
+jinja2.exceptions.UndefinedError: 'markupsafe.Markup object' has no attribute 'calendar'
+2020-07-17 20:22:28,398 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
+2020-07-17 20:23:25,785 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
+2020-07-17 20:27:18,528 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
+2020-07-17 20:28:34,862 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
+2020-07-17 20:28:39,805 ERROR: Exception on /posts/1 [GET] [in c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\routes.py", line 29, in view_post
+    return render_template('view_post.html', post=post)
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\view_post.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\base.html", line 67, in top-level template code
+    {% block content %}
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\view_post.html", line 8, in block "content"
+    {{ moment(post.date_created).subtract(3, 'hours').calendar() }}
+jinja2.exceptions.UndefinedError: 'flask_moment._moment object' has no attribute 'subtract'
+2020-07-17 20:28:56,596 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
+2020-07-17 20:34:48,973 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
+2020-07-17 20:35:47,652 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]

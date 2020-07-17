@@ -2,8 +2,17 @@
 
 {% block content %}
     <h1 class="display-3 mb-3">{{ post.heading }}</h1>
+    <h3 class="lead">
+        Опубликовал {{ post.author.name }}
+
+        {{ moment(post.date_created).fromNow() }}
+
+        {% if post.category.name %}
+            в категории <a href="{{ url_for('view_category', alias=post.category.alias) }}">«{{ post.category.name }}»</a>
+        {% endif %}
+    </h3>
     <p class="lead">{{ post.text | safe }}</p>
-    <h3 class="small">Опубликовал {{ post.author.name }} в {{ post.date_created }}</h3>
+
 {#    Карточка с динамической загрузкой статей #}
     <hr class="my-5">
     <div class="card">

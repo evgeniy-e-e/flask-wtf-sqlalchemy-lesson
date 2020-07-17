@@ -3,7 +3,7 @@ from app import app, db
 from flask import render_template, redirect, url_for, jsonify
 from app.models import User, Post, Category
 from app.forms import RegistrationForm, LoginForm, PostForm
-from datetime import datetime
+from datetime import datetime, timedelta
 from app import login
 from flask_login import login_user, logout_user, current_user, login_required
 from bs4 import BeautifulSoup
@@ -60,7 +60,7 @@ def create_post():
             heading=form.heading.data,
             text=text,
             intro_text=intro_text,
-            date_created=datetime.now(),
+            date_created=datetime.now() - timedelta(hours=3),
             author_id=user.id
         )
         db.session.add(new_post)

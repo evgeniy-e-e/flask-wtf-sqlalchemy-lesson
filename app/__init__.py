@@ -8,7 +8,7 @@ from flask_ckeditor import CKEditor
 import os
 import logging
 from logging.handlers import RotatingFileHandler
-
+from flask_moment import Moment
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -16,6 +16,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 ckeditor = CKEditor(app)
+moment = Moment(app)
 
 # Настройка логирования
 if not os.path.exists('logs'):
