@@ -9,5 +9,5 @@ class Config:
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db') + '?check_same_thread=False'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     FLASK_ADMIN_SWATCH = 'Lumen'
-    ADMIN_EMAIL = 'moscow1@itstep.org'
+    ADMIN_EMAIL = 'mew.forest@gmail.com'
     INTRO_WORDS_COUNT = 20

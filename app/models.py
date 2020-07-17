@@ -36,6 +36,14 @@ class Address(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 
+class Category(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    alias = db.Column(db.String, unique=True)
+    name = db.Column(db.String)
+    description = db.Column(db.String)
+    post = db.relationship('Post', backref='category', lazy='dynamic')
+
+
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     heading = db.Column(db.String(120))
@@ -43,6 +51,7 @@ class Post(db.Model):
     text = db.Column(db.String)
     date_created = db.Column(db.DateTime)
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
     # author = db.relationship('User')
 
     def to_dict(self):
@@ -54,6 +63,6 @@ class Post(db.Model):
         }
 
     def __repr__(self):
-        return f'<Post text={self.text}>'
+        return f'<Post "{self.heading}">'
 
 

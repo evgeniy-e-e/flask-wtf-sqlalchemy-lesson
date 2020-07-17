@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from app import app, db
 from flask import render_template, redirect, url_for, jsonify
-from app.models import User, Post
+from app.models import User, Post, Category
 from app.forms import RegistrationForm, LoginForm, PostForm
 from datetime import datetime
 from app import login
@@ -27,6 +27,13 @@ def index():
 def view_post(id_post):
     post = Post.query.get(id_post)
     return render_template('view_post.html', post=post)
+
+
+@app.route('/category/<string:alias>')
+def view_category(alias):
+    category = Category.query.filter_by(alias=alias).one()
+    posts = Post.query.filter(Post.category == category).all()
+    return render_template('posts.html', posts=posts, category=category)
 
 
 @app.route('/new', methods=['GET', 'POST'])

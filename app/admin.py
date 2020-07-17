@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from app.models import User, Post
+from app.models import User, Post, Address, Category
 from app import app, db
 from flask_admin.contrib.sqla import ModelView
 from flask_admin import Admin
@@ -21,3 +21,5 @@ class ModelViewSecured(ModelView):
 admin = Admin(app, name='blog-admin', template_mode='bootstrap3')
 admin.add_view(ModelViewSecured(User, db.session))
 admin.add_view(ModelViewSecured(Post, db.session))
+admin.add_view(ModelViewSecured(Address, db.session))
+admin.add_view(ModelViewSecured(Category, db.session))
