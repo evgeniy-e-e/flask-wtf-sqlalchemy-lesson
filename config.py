@@ -11,3 +11,4 @@ class Config:
     FLASK_ADMIN_SWATCH = 'Lumen'
     ADMIN_EMAIL = 'mew.forest@gmail.com'
     INTRO_WORDS_COUNT = 20
+    LOG_TO_STDOUT = os.getenv('LOG_TO_STDOUT') or False
