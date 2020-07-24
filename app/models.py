@@ -13,8 +13,8 @@ class User(db.Model, UserMixin):
     age = db.Column(db.Integer)
     sex = db.Column(db.String(10))
     about_me = db.Column(db.String)
-    posts = db.relationship('Post', backref='author', lazy="dynamic")
-    address = db.relationship('Address', uselist=False, backref='user')
+    posts = db.relationship('Post', backref='author', lazy="dynamic")  # Post.author
+    address = db.relationship('Address', uselist=False, backref='user')  # Address.user
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -41,7 +41,7 @@ class Category(db.Model):
     alias = db.Column(db.String, unique=True)
     name = db.Column(db.String)
     description = db.Column(db.String)
-    post = db.relationship('Post', backref='category', lazy='dynamic')
+    post = db.relationship('Post', lazy='dynamic')
 
 
 class Post(db.Model):
@@ -52,7 +52,7 @@ class Post(db.Model):
     date_created = db.Column(db.DateTime)
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
-    # author = db.relationship('User')
+    category = db.relationship('Category')
 
     def to_dict(self):
         return {

@@ -1,75 +1,71 @@
-2020-07-17 20:18:57,061 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
-2020-07-17 20:21:51,971 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
-2020-07-17 20:21:56,721 ERROR: Exception on /posts/2 [GET] [in c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py:1891]
+2020-07-24 19:17:05,740 ERROR: Exception on /posts/1 [GET] [in C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
   File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\routes.py", line 29, in view_post
     return render_template('view_post.html', post=post)
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\templating.py", line 137, in render_template
     return _render(
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\templating.py", line 120, in _render
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\templating.py", line 120, in _render
     rv = template.render(context)
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\jinja2\environment.py", line 1090, in render
     self.environment.handle_exception()
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\view_post.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\base.html", line 66, in top-level template code
-    {% block content %}
-  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\view_post.html", line 8, in block "content"
-    {{ moment(post.date_created).fromNow().calendar()  }}
-jinja2.exceptions.UndefinedError: 'markupsafe.Markup object' has no attribute 'calendar'
-2020-07-17 20:22:28,398 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
-2020-07-17 20:23:25,785 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
-2020-07-17 20:27:18,528 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
-2020-07-17 20:28:34,862 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
-2020-07-17 20:28:39,805 ERROR: Exception on /posts/1 [GET] [in c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\routes.py", line 29, in view_post
-    return render_template('view_post.html', post=post)
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\templating.py", line 137, in render_template
-    return _render(
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "c:\users\mewfo\onedrive\создание веб-приложений на python\лекции\python\15. веб-приложения\12. flask-sqlalchemy + wtforms\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\jinja2\_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
   File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\view_post.html", line 1, in top-level template code
     {% extends "base.html" %}
   File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\base.html", line 67, in top-level template code
     {% block content %}
-  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\view_post.html", line 8, in block "content"
-    {{ moment(post.date_created).subtract(3, 'hours').calendar() }}
-jinja2.exceptions.UndefinedError: 'flask_moment._moment object' has no attribute 'subtract'
-2020-07-17 20:28:56,596 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
-2020-07-17 20:34:48,973 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
-2020-07-17 20:35:47,652 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\view_post.html", line 10, in block "content"
+    {% if post.category.name %}
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\jinja2\environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.models.Post object' has no attribute 'category'
+2020-07-24 19:17:06,075 ERROR: Exception on /posts/1 [GET] [in C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\routes.py", line 29, in view_post
+    return render_template('view_post.html', post=post)
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\view_post.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\base.html", line 67, in top-level template code
+    {% block content %}
+  File "C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\templates\view_post.html", line 10, in block "content"
+    {% if post.category.name %}
+  File "C:\Users\mewfo\AppData\Local\Programs\Python\Python38-32\lib\site-packages\jinja2\environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.models.Post object' has no attribute 'category'
+2020-07-24 19:18:11,089 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]

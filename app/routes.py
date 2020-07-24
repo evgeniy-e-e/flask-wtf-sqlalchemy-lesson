@@ -54,8 +54,6 @@ def create_post():
             intro_text = preview_text.rstrip() + '...'
         else:
             intro_text = preview_text.rstrip()
-
-
         new_post = Post(
             heading=form.heading.data,
             text=text,
