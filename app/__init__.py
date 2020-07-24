@@ -40,6 +40,9 @@ app.logger.info('Flask started...')
 from app.api import api
 app.register_blueprint(api, url_prefix='/api/v1')
 
+# Создаем в бд модели
+db.create_all()
+
 from app import routes, admin
 
 
