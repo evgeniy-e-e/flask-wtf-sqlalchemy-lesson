@@ -69,3 +69,8 @@ Traceback (most recent call last):
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'app.models.Post object' has no attribute 'category'
 2020-07-24 19:18:11,089 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
+2020-07-24 19:32:42,857 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
+2020-07-24 20:09:21,723 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:30]
+2020-07-24 20:30:30,339 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:32]
+2020-07-24 20:32:38,310 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:32]
+2020-07-24 20:33:23,891 INFO: Flask started... [in C:\Users\mewfo\OneDrive\Создание веб-приложений на Python\Лекции\Python\15. Веб-приложения\13. Финальное веб-приложение\flask-wtf-sqlalchemy-lesson\app\__init__.py:32]

@@ -5,8 +5,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Config:
-    SECRET_KEY = 'abcdef1234567890!@#$%^000!!!'
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db') + '?check_same_thread=False'
+    SECRET_KEY = os.getenv('SECRET_KEY') or 'abcdef1234567890!@#$%^000!!!'
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db') + '?check_same_thread=False'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     FLASK_ADMIN_SWATCH = 'Lumen'
     ADMIN_EMAIL = 'mew.forest@gmail.com'
