@@ -8,11 +8,17 @@ services:
     environment:
       SECRET_KEY: 1234567890ASDFGHJKL
       SQLALCHEMY_DATABASE_URI: postgresql://admin:123ABCDASDFGH@db:5432/blog
-    command:
-      gunicorn --bind 0.0.0.0:5000 app:app
+    command: bash -c "
+      flask db init || true
+      && flask db migrate
+      && flask db upgrade
+      && gunicorn --bind 0.0.0.0:5000 app:app
+      "
     ports:
       - 5000:5000
     restart: always
+    volumes:
+    - ./migrations-docker:/usr/src/flask-lesson/migrations
 
   db:
     container_name: db

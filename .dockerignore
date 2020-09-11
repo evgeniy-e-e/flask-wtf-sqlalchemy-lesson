@@ -6,3 +6,4 @@ logs/
 .git/
 .gitignore
 Procfile
+migrations-docker/

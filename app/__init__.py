@@ -18,8 +18,6 @@ login = LoginManager(app)
 ckeditor = CKEditor(app)
 moment = Moment(app)
 
-print('Секретный ключ: ' + app.config['SECRET_KEY'])
-
 # Настройка логирования
 if not os.path.exists('logs'):
     os.mkdir('logs')

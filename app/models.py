@@ -52,6 +52,7 @@ class Post(db.Model):
     date_created = db.Column(db.DateTime)
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
+    is_starred = db.Column(db.Boolean, default=False)
     category = db.relationship('Category')
 
     def to_dict(self):
