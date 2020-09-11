@@ -1,0 +1,25 @@
+version: "3.5"
+services:
+  blog:
+    container_name: blog
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      SECRET_KEY: 1234567890ASDFGHJKL
+      SQLALCHEMY_DATABASE_URI: postgresql://admin:123ABCDASDFGH@db:5432/blog
+    command:
+      gunicorn --bind 0.0.0.0:5000 app:app
+    ports:
+      - 5000:5000
+    restart: always
+
+  db:
+    container_name: db
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 123ABCDASDFGH
+      POSTGRES_DB: blog
+    ports:
+    - 5432:5432
