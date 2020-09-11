@@ -14,6 +14,8 @@ services:
       && flask db upgrade
       && gunicorn --bind 0.0.0.0:5000 app:app
       "
+      # Чтобы запустить сервер в debug-режиме, замените последнюю строчку на
+      # && flask run --host=0.0.0.0 --debugger --reload
     ports:
       - 5000:5000
     restart: always

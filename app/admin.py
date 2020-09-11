@@ -18,7 +18,7 @@ class ModelViewSecured(ModelView):
         return redirect(url_for('login'))
 
 
-admin = Admin(app, name='blog-admin', template_mode='bootstrap3')
+admin = Admin(app, name='admin', template_mode='bootstrap3')
 admin.add_view(ModelViewSecured(User, db.session))
 admin.add_view(ModelViewSecured(Post, db.session))
 admin.add_view(ModelViewSecured(Address, db.session))
